@@ -7,6 +7,19 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import Vue2Filters from 'vue2-filters'
+
+Vue.use(Vue2Filters, {
+    currency: {
+        symbol: '',
+        decimalDigits: 2,
+        thousandsSeparator: ' ',
+        decimalSeparator: '.',
+        symbolOnLeft: true,
+        spaceBetweenAmountAndSymbol: false,
+        showPlusSign: false
+    }
+});
 
 /**
  * The following block of code may be used to automatically register your
